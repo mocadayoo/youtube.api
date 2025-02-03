@@ -9,7 +9,7 @@ async function getId(url, debug = false) {
     try {
         if (url.includes('https://') || url.includes('http://') || url.includes('watch?v=')) {
             if (url.includes('shorts')) {
-                const Id = url.split('/')[4];
+                const Id = url.split('/')[4].substring(0, 11);
                 debug && console.debug(`DEBUG | Detected Youtube Shorts URL | ${Id}`);
                 return Id;
             } else if (url.includes('youtu.be')) {
