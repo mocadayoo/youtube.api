@@ -1,4 +1,4 @@
-const { videoinfo, analyzevideo } = require('./youtubemodule/__init__');
+const { getcookie, videoinfo, analyzevideo } = require('./youtubemodule/__init__');
 const fs = require('fs')
 
 async function main() {
