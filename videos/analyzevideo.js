@@ -26,6 +26,10 @@ async function analyzevideo(data) {
     const commentCount = engagementPanels[0]?.engagementPanelSectionListRenderer?.header?.engagementPanelTitleHeaderRenderer?.contextualInfo?.runs[0]?.text || 0;
     const url = data?.currentVideoEndpoint.commandMetadata.webCommandMetadata.url;
     const Id = await getId(url);
+    const channel = {
+        url: 'https://www.youtube.com/channel/'+Content[1]?.videoSecondaryInfoRenderer?.owner?.videoOwnerRenderer?.title?.runs[0]?.navigationEndpoint?.browseEndpoint?.browseId,
+        shorturl: 'https://www.youtube.com/'+Content[1]?.videoSecondaryInfoRenderer?.owner?.videoOwnerRenderer?.title?.runs[0]?.navigationEndpoint?.browseEndpoint?.canonicalBaseUrl
+    };
 
     const thumbnails = {
         default: `https://i.ytimg.com/vi/${Id}/hqdefault.jpg`,
@@ -41,6 +45,7 @@ async function analyzevideo(data) {
         commentCount,
         thumbnails,
         isLive,
+        channel
     };
 }
 
