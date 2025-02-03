@@ -101,7 +101,7 @@
   "isLive": false,
   "channel": {
     "url": "https://www.youtube.com/channel/UC5CwaMl1eIgY8h02uZw7u8A",
-    "shorturl": "https://www.youtube.com//channel/UC5CwaMl1eIgY8h02uZw7u8A"
+    "shorturl": "https://www.youtube.com/channel/UC5CwaMl1eIgY8h02uZw7u8A"
   }
 }
 ```

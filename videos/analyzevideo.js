@@ -27,8 +27,8 @@ async function analyzevideo(data) {
     const url = data?.currentVideoEndpoint.commandMetadata.webCommandMetadata.url;
     const Id = await getId(url);
     const channel = {
-        url: 'https://www.youtube.com/channel/'+Content[1]?.videoSecondaryInfoRenderer?.owner?.videoOwnerRenderer?.title?.runs[0]?.navigationEndpoint?.browseEndpoint?.browseId,
-        shorturl: 'https://www.youtube.com/'+Content[1]?.videoSecondaryInfoRenderer?.owner?.videoOwnerRenderer?.title?.runs[0]?.navigationEndpoint?.browseEndpoint?.canonicalBaseUrl
+        url: 'https://www.youtube.com/channel/' + Content[1]?.videoSecondaryInfoRenderer?.owner?.videoOwnerRenderer?.title?.runs[0]?.navigationEndpoint?.browseEndpoint?.browseId,
+        shorturl: 'https://www.youtube.com' + Content[1]?.videoSecondaryInfoRenderer?.owner?.videoOwnerRenderer?.title?.runs[0]?.navigationEndpoint?.commandMetadata?.webCommandMetadata?.url
     };
 
     const thumbnails = {
